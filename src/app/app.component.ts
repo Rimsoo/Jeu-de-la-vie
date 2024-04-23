@@ -42,7 +42,8 @@ export class AppComponent implements OnInit {
   }
 
   useSave() {
-    this.table = this.saveTabale
+    this.stop = true;
+    this.table = this.saveTabale;
   }
 
   async play(): Promise<void>{
