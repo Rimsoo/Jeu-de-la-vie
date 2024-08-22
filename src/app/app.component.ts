@@ -38,13 +38,23 @@ export class AppComponent implements OnInit {
   }
 
   save() {
+    var confirm = window.confirm("Are you sure you want to save ?");
+    if(!confirm)
+      return;
     this.saveTabale = this.table;
   }
 
+  
   useSave() {
-    if(this.saveTabale.length === 0)
+    if(!this.saveTabale) {
+      alert("No save found");
       return;
-    
+    }
+
+    var confirm = window.confirm("Are you sure you want to use the save ?");
+    if(!confirm)
+      return;
+
     this.stop = true;
     this.table = this.saveTabale;
   }
