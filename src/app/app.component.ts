@@ -42,6 +42,9 @@ export class AppComponent implements OnInit {
   }
 
   useSave() {
+    if(this.saveTabale.length === 0)
+      return;
+    
     this.stop = true;
     this.table = this.saveTabale;
   }
